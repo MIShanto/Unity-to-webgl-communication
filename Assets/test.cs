@@ -37,4 +37,16 @@ public class test : MonoBehaviour
             text.text = "ctrl + s";
         }
     }
+
+    public void GetFromJS()
+    {
+        text.text = "Window resized";
+
+        Invoke("ResetText", 2f);
+    }
+
+    void ResetText()
+    {
+        text.text = "";
+    }
 }
